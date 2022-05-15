@@ -1,0 +1,35 @@
+
+<!--<div class="row" id="main">
+    <div *ngFor="let filme of this.filme.movies" class="movie card-deck">
+        <div class="card">
+            <div class="espaco_img img" style="height: 100%;">
+                <img class="imagem" id='imagem'
+                src="{{filme.imgMovie}}" alt="">
+            </div>
+            <div class="espaco_img title" style="margin-top:0; height: 200px;">
+                <h5 class="card-title">{{filme.nameMovie}}</h5>
+                <p class="card-text descricao" >{{filme.descMovie}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Abrir</a>
+                <small class="text-muted"> Categoria: {{filme.category}}
+                <span class="rating">
+                    {{filme.classfication}}%
+                </span></small>
+            </div>
+        </div>
+    </div>
+</div>-->
+<div class="all">
+    <div *ngFor="let filme of this.filme.movies" class="cardMovie">
+        <div class="espaco_img img" style="height: 100%;">
+            <img class="imagem" id='imagem' src="{{filme.imgMovie}}" alt="">
+        </div>
+        <div class="details">
+            <span class="classification">{{filme.classfication}}%</span>
+            <h2>{{filme.nameMovie}}</h2>
+            <small>{{filme.descMovie}}</small>
+        </div>
+    </div> 
+    
+</div>

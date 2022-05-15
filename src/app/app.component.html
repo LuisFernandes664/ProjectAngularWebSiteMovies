@@ -1,0 +1,39 @@
+<body class="all">
+    <header>
+    
+    </header>
+
+    <div class="navbar">
+      <div class="logo">
+        <h1><a routerLink="/">NETFLIX v2.0</a></h1>
+      </div>
+    
+      <div class="nav__links">
+        <li><a role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/" class="nav__link" >Home</a></li>
+        <li><a role="presentation" routerLinkActive="active" routerLink="create" class="nav__link">Adicionar</a></li>
+        <li><a role="presentation" routerLinkActive="active" routerLink="users" class="nav__link">Details</a></li>
+        <a href="#" class="nav__link">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <div>
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+</body>
+<footer>
+    <div class="wrapper">
+      <small>&copy;2022 <strong>NETFLIXXXXXXX</strong>, Direitos Reservados :)</small>
+      <nav class="footer-nav">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+      </nav>
+    </div>
+</footer>
+

@@ -1,0 +1,64 @@
+
+<br>
+<div class="container">
+
+  <!--(ngSubmit)="createMovie(form)"-->
+  <form #form="ngForm" >
+      <h3>New Movie</h3>
+      <div class="form-group">
+        <label for="InputNome">Nome</label>
+        <input [(ngModel)]="newMovie.nameMovie" name="nameMovie" #nameMovie="ngModel"
+         required type="text" class="form-control " id="InputNome" placeholder="ex. The Purge">
+        <br>
+      </div>
+      <div class="form-group">
+          <label for="InputDescricao">Descrição Filme</label>
+          <textarea [(ngModel)]="newMovie.descMovie" ngModel name="descMovie" #descMovie="ngModel"
+           class="form-control" id="InputDescricao" rows="3" placeholder="ex. Era uma vez..."></textarea>
+      </div>
+      <br>
+      <div class="form-group">
+          <label for="inlineFormCustomSelect">Select Category</label>
+          <select [(ngModel)]="newMovie.category" name="category" #category="ngModel"
+           class="form-control" id="inlineFormCustomSelect">
+              <option select>Select Options</option>
+              <option value="1">Terror</option>
+              <option value="2">Comedia</option>
+              <option value="3">Suspense</option>
+              <option value="4">outro</option>
+          </select>
+      </div>
+      <br>
+      <div class="form-group">
+              <label for="exampleFormControlTextarea1">Banner Movie</label>
+          <div class="input-group input-group-sm mb-3">
+              <input [(ngModel)]="newMovie.imgMovie" 
+              name="imgMovie" #imgMovie="ngModel"
+              type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+              placeholder="ex. https://www.SpiderMan.com/img.png"> 
+              <span class="inputOr"> or </span> 
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlSelect1">Classificação</label>
+          <select [(ngModel)]="newMovie.classfication" 
+            name="classfication" #classfication="ngModel"
+            class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <br>
+      <button (click)="createMovie(form)" type="submit" class="btn btn-primary"> 
+        
+          Adicionar Movie
+          </button>
+        <!--<a routerLink="/"></a>-->
+  </form>
+</div>
+
+
