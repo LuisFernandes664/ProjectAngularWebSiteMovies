@@ -10,12 +10,8 @@ export class AppComponent implements OnInit {
   
   movies: any[];
 
-  constructor(private CrudService: CrudService) {
-
-
-  }
+  constructor(private CrudService: CrudService) { }
   
-
   ngOnInit(): void {
     this.movies = this.CrudService.movies;
   }

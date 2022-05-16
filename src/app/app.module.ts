@@ -9,25 +9,30 @@ import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DetailsRemoveComponent } from './details-remove/details-remove.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'create', component: CreateComponent},
+  {path: 'details', component: DetailsRemoveComponent, children: [
+    {path: ':name', component: DetailsRemoveComponent}
+  ]}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CreateComponent
+    CreateComponent,
+    DetailsRemoveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [
     CrudService,

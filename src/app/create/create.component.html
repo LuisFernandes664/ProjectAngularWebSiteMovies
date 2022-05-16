@@ -3,23 +3,28 @@
 <div class="container">
 
   <!--(ngSubmit)="createMovie(form)"-->
-  <form #form="ngForm" >
+  <form #form="ngForm">
       <h3>New Movie</h3>
       <div class="form-group">
-        <label for="InputNome">Nome</label>
-        <input [(ngModel)]="newMovie.nameMovie" name="nameMovie" #nameMovie="ngModel"
-         required type="text" class="form-control " id="InputNome" placeholder="ex. The Purge">
+        <label for="nameMovie">Nome</label>
+        <input name="nameMovie" 
+        [(ngModel)]="newMovie.nameMovie" 
+        #nameMovie="ngModel"
+         required type="text" class="form-control " id="nameMovie" placeholder="ex. The Purge">
         <br>
       </div>
       <div class="form-group">
           <label for="InputDescricao">Descrição Filme</label>
-          <textarea [(ngModel)]="newMovie.descMovie" ngModel name="descMovie" #descMovie="ngModel"
+          <textarea [(ngModel)]="newMovie.descMovie"
+            ngModel name="descMovie" #descMovie="ngModel"
+            required
            class="form-control" id="InputDescricao" rows="3" placeholder="ex. Era uma vez..."></textarea>
       </div>
       <br>
       <div class="form-group">
           <label for="inlineFormCustomSelect">Select Category</label>
           <select [(ngModel)]="newMovie.category" name="category" #category="ngModel"
+            required
            class="form-control" id="inlineFormCustomSelect">
               <option select>Select Options</option>
               <option value="1">Terror</option>
@@ -33,6 +38,7 @@
               <label for="exampleFormControlTextarea1">Banner Movie</label>
           <div class="input-group input-group-sm mb-3">
               <input [(ngModel)]="newMovie.imgMovie" 
+              required
               name="imgMovie" #imgMovie="ngModel"
               type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
               placeholder="ex. https://www.SpiderMan.com/img.png"> 
@@ -43,6 +49,7 @@
       <div class="form-group">
           <label for="exampleFormControlSelect1">Classificação</label>
           <select [(ngModel)]="newMovie.classfication" 
+            required
             name="classfication" #classfication="ngModel"
             class="form-control" id="exampleFormControlSelect1">
             <option>1</option>
@@ -53,11 +60,11 @@
           </select>
         </div>
         <br>
-      <button (click)="createMovie(form)" type="submit" class="btn btn-primary"> 
-        
+        <a *ngIf="form.valid" routerLink="/">
+        <button (click)="createMovie(form)" class="btn btn-primary"> 
           Adicionar Movie
           </button>
-        <!--<a routerLink="/"></a>-->
+        </a>
   </form>
 </div>
 

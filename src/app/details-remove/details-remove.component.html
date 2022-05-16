@@ -1,0 +1,52 @@
+<div class="container-xl px-6 container">
+  <div class="row">
+      <div class="col-xl-4">
+          <!-- banner do filme-->
+          <div class="card mb-4 mb-xl-0">
+              <div class="card-header">Movie Banner</div>
+              <div class="card-body text-center">
+                  <img class="img-account-profile rounded-circle mb-2 img-banner" 
+                  src="{{this.atualName.imgMovie}}" alt="">
+                  <br>
+                  <br>
+                  <button class="btn btn-primary" type="file">New Banner</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-xl-8">
+          <div class="card mb-4">
+              <div class="card-header">Details</div>
+              <div class="card-body">
+                  <form>
+                      <div class="mb-3 col-md">
+                          <label class="small mb-1" for="inputName">Nome</label>
+                          <input class="form-control" id="inputName" type="text" placeholder="Nome" value="{{this.atualName.nameMovie}}" disabled>
+                      </div>
+                      <div class="row gx-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputCategory">Select Category</label>
+                            <input class="form-control" id="inputCategory" type="text" placeholder="Category" value="{{this.atualName.category}}" disabled>
+                        </div>
+                          <div class="col-md-6">
+                              <label class="small mb-1" for="inputClassification">Classificação</label>
+                              <input class="form-control" id="inputClassification" type="text" placeholder="Classificação" value="{{this.atualName.classfication}}" disabled>
+                          </div>
+                      </div>
+                      <div class="row gx-3 mb-3">
+                        <div class="col-md-12">
+                            <label class="small mb-1" for="inputDescMovie">Descrição Filme</label>
+                            <input class="form-control" id="inputDescMovie" type="text" placeholder="Descrição Filme" value="{{this.atualName.descMovie}}" disabled>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="small mb-1" for="inputLinkBanner">Link Banner Movie</label>
+                            <input class="form-control" id="inputLinkBanner" type="text" placeholder="Link Banner" value="{{this.atualName.imgMovie}}" disabled>
+                        </div>
+                    </div>
+                      <br>
+                      <button class="btn btn-danger remove" (click)="removeMovie(this.atualName)" type="button">Remove</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

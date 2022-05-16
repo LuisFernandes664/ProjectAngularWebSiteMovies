@@ -1,0 +1,28 @@
+.inputOr{
+    padding: 0px 10px;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.img-banner{
+    width: 270px;
+    height: 300px;
+}
+
+img{
+    object-fit: cover;
+    /*X, Y*/
+    object-position: 50% 20%;
+}
+
+.remove{
+    float: right;
+    margin-right: 20px;
+}

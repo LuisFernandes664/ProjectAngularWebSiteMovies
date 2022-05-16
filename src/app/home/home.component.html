@@ -20,8 +20,13 @@
         </div>
     </div>
 </div>-->
+
+<!--[routerLink]="[filme.nameMovie]" -->
+<!--(click)="redirect()"-->
 <div class="all">
-    <div *ngFor="let filme of this.filme.movies" class="cardMovie">
+    <div 
+    [routerLink]="['/details/' + filme.nameMovie]"
+    *ngFor="let filme of movieParse" class="cardMovie">
         <div class="espaco_img img" style="height: 100%;">
             <img class="imagem" id='imagem' src="{{filme.imgMovie}}" alt="">
         </div>
@@ -30,6 +35,10 @@
             <h2>{{filme.nameMovie}}</h2>
             <small>{{filme.descMovie}}</small>
         </div>
-    </div> 
-    
+
+    </div>
+</div>
+<div>
+    <!-- Button trigger modal -->
+
 </div>
