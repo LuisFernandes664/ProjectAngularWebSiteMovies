@@ -43,7 +43,9 @@
                         </div>
                     </div>
                       <br>
-                      <button class="btn btn-danger remove" (click)="removeMovie(this.atualName)" type="button">Remove</button>
+                      <button 
+                      routerLink="/"
+                      class="btn btn-danger remove" (click)="removeMovie(this.atualName.id)" type="button">Remove</button>
                   </form>
               </div>
           </div>

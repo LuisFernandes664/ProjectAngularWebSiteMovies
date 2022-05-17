@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CrudService } from 'src/services/crud.service';
 import { Movie } from './movie'
+import { UUID } from 'angular2-uuid';
 
 @Component({
   selector: 'app-create',
@@ -22,11 +23,11 @@ export class CreateComponent implements OnInit {
 
   createMovie(form: NgForm): void {
     if(form.valid && this.newMovie.nameMovie && this.newMovie.imgMovie){
-      console.log(this.newMovie)
+      this.newMovie.id = UUID.UUID()
+      //console.log(this.newMovie.id)
       this.crudService.createMovie(this.newMovie);
       console.log(this.newMovie)
-      //this.newMovie = "";
-      console.log(this.crudService.movies)
+      //console.log(String(this.newMovie.id))
     }
     else{ 
       alert('Preencha os campos abaixo');

@@ -20,6 +20,7 @@ export class DetailsRemoveComponent implements OnInit {
   constructor(private crudService: CrudService, private activeRoute: ActivatedRoute) {  }
 
   ngOnInit(): void {
+    
     let name = this.activeRoute.snapshot.children[0].params["name"];
     this.showMovie = name;
 
@@ -33,6 +34,8 @@ export class DetailsRemoveComponent implements OnInit {
       if(String(this.allMovies[i].nameMovie) == this.showMovie){
         //console.log(this.allMovies[i].nameMovie)
         this.atualName = this.allMovies[i]
+        let ind = i
+        console.log(ind)
       }
     }
 
@@ -52,9 +55,9 @@ export class DetailsRemoveComponent implements OnInit {
   }
 
   removeMovie(removefilmeName: any): void {
-    this.crudService.removeMovie(removefilmeName);
+
     console.log(removefilmeName)
+    this.crudService.removeMovie(removefilmeName);
     //this.newMovie = "";
-    console.log(this.crudService.movies)
   }
 }

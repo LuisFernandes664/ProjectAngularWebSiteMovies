@@ -4,6 +4,7 @@
 
   <!--(ngSubmit)="createMovie(form)"-->
   <form #form="ngForm">
+    <input class="d-none" type="number" name="idMovie" id="idMovie" [(ngModel)]="newMovie.id" >
       <h3>New Movie</h3>
       <div class="form-group">
         <label for="nameMovie">Nome</label>
